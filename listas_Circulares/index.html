@@ -1,43 +1,61 @@
-<!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Listas circulares</title>
-    <script src="cola.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Circulares</title>
 </head>
-<style>
-    #formSection{
-        display: flex;
-    }
-    #formSection>div{
-        width: 30%;
-        margin: 15px;
-    }
-
-</style>
 <body>
-    <section id='formSection'>
-        <div>
-            <h2>Agregar base</h2>
-            <form id='agregarForm' method='post'>
-                <input type='text' id='base' placeholder='Base'>
-                <input type='text' id='minutos' placeholder='Minutos'>
-                <div>
-                    <button type='submit'>Agregar</button>
+    <center>
+        <h1>Ruta de transporte</h1>
+    </center>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <form id="form_1">
+                        <h3>Agregar ruta</h3>
+                        <input type="text" id="nombre" placeholder="Nombre ruta"/>
+                        <p></p>
+                        <input type="number" id="minutos" placeholder="Minutos"/>
+                        <p></p>
+                        <!-- <input type="number" id="posicion" placeholder="Posición (Opcional)"/> -->
+                        <p></p>
+                        <input type="button" value="Agregar" id="btAgregar"/>
+                        <p></p>
+                        <h3>Buscar ruta</h3>
+                        <input type="text" id="buscar" placeholder="Nombre ruta"/>
+                        <input type="button" value="Buscar" id="btBuscar"/>
+                        <p></p>
+                        <h3>Borrar ruta</h3>
+                        <input type="text" id="borrar" placeholder="Nombre ruta"/>
+                        <input type="button" value="Borrar" id="btBorrar"/>
+                        <p></p>
+                        <h3>Listar rutas</h3>
+                        <input type="button" value="Listar" id="btListar"/>
+                    </form>
                 </div>
-            </form>
-        </div>
-        <div>
-            <h2>Obtener tarjeta de trabajo</h2>
-            <form id='agregariniciar' method='post'>
-                <input type='text' id='horarioinicial' placeholder='Ingresa el horario de inicio'>
-                <input type='text' id='horariofinal' placeholder='Hora en terminar'>
-                <input type='text' id='Baseinicio' placeholder='Base inicio'>
-                <div>
-                    <button type='submit'>Obtener</button>
+                <div class="col-3">
+                    <form id="form_2">
+                        <h3>Recorrido</h3>
+                        <input type="text" id="nombreR" placeholder="Nombre ruta"/>
+                        <p></p>
+                        <p>Nota: Colocar las horas en minutos. Ejemplo: 1:15 = 75</p>
+                        <p></p>
+                        <input type="number" id="horaIn" placeholder="Minitos inicial">
+                        <p></p>
+                        <input type="number" id="horaFin" placeholder="Minutos final">
+                        <p></p>
+                        <input type="button" value="Iniciar" id="btIniciar"/>
+                    </form>
                 </div>
-            </form>
+                <div class="col-6">
+                    <h3>Inventario</h3>
+                    <ul id="listado" class="list-group"></ul>
+                </div>
+            </div>
         </div>
+    </div>
+    <script src="listas_circulares.js"></script>
 </body>
 </html>
