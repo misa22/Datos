@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<style>
+    #formSection{
+        display: flex;
+    }
+    #formSection>div{
+        width: 30%;
+        margin: 15px;
+    }
+    .historyElement{
+        width: 100%;
+        display: list-item;
+        list-style-position: inside;
+    }
+</style>
+<body>
+    <section id='formSection'>
+        <div>
+            <h2>Agregar producto</h2>
+            <form id='agregarForm' method='post'>
+                <input type='text' id='codigo' placeholder='Codigo de producto'>
+                <input type='text' id='producto' placeholder='Nombre de producto'>
+                <input type='text' id='cantidad' placeholder='Cantidad'>
+                <input type='text' id='costo' placeholder='Costo'>
+                <textarea  id='decripcion' cols='30' rows='10' placeholder='Descripcion'></textarea>
+                <div>
+                    <button type='submit'>Agregar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <button onclick='eliminarInicio()'>Eliminar inicio</button>
+        <button onclick='invertir()'>Invertir</button>
+        <div>
+            <input type='text' id='buscarInput' placeholder='Buscar por codigo'>
+            <button onclick="buscar()">Buscar</button>
+        </div>
+    </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Codigo de producto</th>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Costo*unidad</th>
+                    <th>Costo total de mercancia</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Historial</h3>
+        <div id="historialContenido"></div>
+    </section>
+    <script src='./index.js' ></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Listas circulares</title>
+    <script src="cola.js"></script>
+</head>
+<style>
+    #formSection{
+        display: flex;
+    }
+    #formSection>div{
+        width: 30%;
+        margin: 15px;
+    }
+
+</style>
+<body>
+    <section id='formSection'>
+        <div>
+            <h2>Agregar base</h2>
+            <form id='agregarForm' method='post'>
+                <input type='text' id='base' placeholder='Base'>
+                <input type='text' id='minutos' placeholder='Minutos'>
+                <div>
+                    <button type='submit'>Agregar</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h2>Obtener tarjeta de trabajo</h2>
+            <form id='agregariniciar' method='post'>
+                <input type='text' id='horarioinicial' placeholder='Ingresa el horario de inicio'>
+                <input type='text' id='horariofinal' placeholder='Hora en terminar'>
+                <input type='text' id='Baseinicio' placeholder='Base inicio'>
+                <div>
+                    <button type='submit'>Obtener</button>
+                </div>
+            </form>
+        </div>
+</body>
+</html>
